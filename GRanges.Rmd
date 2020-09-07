@@ -2,10 +2,11 @@
 > library(rtracklayer)
 > setwd("C:\\Users\\Admin\\Documents\\Github\\ABC")
 > gtl=rtracklayer::import("mm9_annotation.gtf")
-
-
-
+gene_id=split(gtl,gtl$gene_id) # extra parameter drop=FALSE to retain metadata, extract the gene_name
+gene_ir=reduce(gene_id)
+range(gene_ir) #length of each gene_id
 r=rtracklayer::import("reduced_merged.bed")
+promoters(range(gen_ir),upstream=1000,downstream=1000)
 findOverlaps(gr, grl)
 > fo1=as.data.frame(fo)
 > write(fol,file="findover.csv")
