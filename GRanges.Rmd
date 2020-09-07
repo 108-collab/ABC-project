@@ -1,0 +1,11 @@
+
+> library(rtracklayer)
+> setwd("C:\\Users\\Admin\\Documents\\Github\\ABC")
+> gtl=rtracklayer::import("mm9_annotation.gtf")
+
+
+
+r=rtracklayer::import("reduced_merged.bed")
+findOverlaps(gr, grl)
+> fo1=as.data.frame(fo)
+> write(fol,file="findover.csv")
